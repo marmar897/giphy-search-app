@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import GifCard from './GifCard';
 import GifCards from './GifCard';
+
 
 class App extends Component{
   constructor(props){
