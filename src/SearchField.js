@@ -14,8 +14,9 @@ class SearchField extends Component{
     render(){
         return(
             <div className ="searchField" > 
-            <input onChange={event => this.onInputChange(event.target.value)}/>
-            
+            <input id= "submitId" placeholder="Search for gifs!" onChange={event => this.onInputChange(event.target.value)}/>
+            <button onClick= {this.handleFormChanges}> Search </button>
+
             </div>
         )
     }
