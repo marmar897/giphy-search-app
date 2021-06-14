@@ -3,19 +3,20 @@ import React, { Component } from 'react';
 class SearchField extends Component{
     constructor(){
         super();
-        this.state = {term: ''}
+        this.state = {input: ''}
     }
 
-    onInputChange(term) {
-        this.setState({term});
-        this.props.onTermChange(term);
+    onInputChange(input) {
+        this.setState({input});
+        console.log(input)
+         this.props.onTermChange(input);
     }
 
     render(){
         return(
             <div className ="searchField" > 
-            <input id= "submitId" placeholder="Search for gifs!" onChange={event => this.onInputChange(event.target.value)}/>
-            <button onClick= {this.handleFormChanges}> Search </button>
+            <input id= "submitId" placeholder="Search for gifs!" />
+            <button onClick= {() => this.onInputChange(document.getElementById('submitId').value)}> Search </button>
 
             </div>
         )
